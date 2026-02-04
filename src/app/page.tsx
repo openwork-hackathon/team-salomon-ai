@@ -49,7 +49,7 @@ export default function Home() {
       </section>
 
       <p className="text-xs text-zinc-500">
-        Note: wallet connect + on-chain actions will be wired next (Mint Club V2 integration).
+        Tip: start at <span className="font-mono">/token</span> to buy/sell SALOMON, then open the Copilot to unlock premium.
       </p>
     </div>
   );

@@ -14,7 +14,7 @@ import {
   readTokenMetadata,
   toTokenUnits,
 } from "@/lib/mintclub";
-import { getPublicClient, getWalletClient } from "@/lib/web3";
+import { getPublicClient, getWalletClient, SALOMON_TOKEN_ADDRESS } from "@/lib/web3";
 
 const STORAGE_KEY = "salomon.tokenAddress";
 
@@ -27,7 +27,7 @@ export default function TokenPage() {
   const [status, setStatus] = useState<string>("");
   const [busy, setBusy] = useState(false);
 
-  const [tokenAddressInput, setTokenAddressInput] = useState<string>("");
+  const [tokenAddressInput, setTokenAddressInput] = useState<string>(SALOMON_TOKEN_ADDRESS ?? "");
   const tokenAddress = useMemo(() => {
     if (!isAddress(tokenAddressInput)) return null;
     return tokenAddressInput as Address;

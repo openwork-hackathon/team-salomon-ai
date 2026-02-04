@@ -5,6 +5,8 @@ import type { Address } from "viem";
 import { isAddress } from "viem";
 
 import { readBalance } from "@/lib/mintclub";
+import Link from "next/link";
+
 import { SALOMON_TOKEN_ADDRESS } from "@/lib/web3";
 
 const STORAGE_KEY = "salomon.tokenAddress";
@@ -69,7 +71,7 @@ export default function CopilotPage() {
         </p>
       </div>
 
-      <div className="flex items-center justify-between rounded-2xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-950">
+      <div className="flex flex-col gap-3 rounded-2xl border border-zinc-200 bg-white p-5 sm:flex-row sm:items-center sm:justify-between dark:border-zinc-800 dark:bg-zinc-950">
         <div className="space-y-1">
           <div className="text-sm font-semibold">Wallet</div>
           <div className="text-xs text-zinc-500">
@@ -80,7 +82,13 @@ export default function CopilotPage() {
           ) : null}
         </div>
 
-        <div className="flex gap-2">
+        <div className="flex flex-col gap-2 sm:flex-row">
+          <Link
+            href="/token"
+            className="inline-flex h-10 items-center justify-center rounded-full border border-zinc-300 px-5 text-sm font-medium hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-900"
+          >
+            Buy / Sell
+          </Link>
           <button
             onClick={connect}
             className="inline-flex h-10 items-center justify-center rounded-full bg-zinc-900 px-5 text-sm font-medium text-white hover:bg-zinc-800 dark:bg-zinc-50 dark:text-black dark:hover:bg-zinc-200"
