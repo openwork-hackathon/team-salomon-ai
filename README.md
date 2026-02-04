@@ -5,6 +5,7 @@
 **Live token:** https://mint.club/token/base/SALOMON  
 **Token address (Base):** `0xA27b0fCfea7457900D04229DA986a28511fb5D81`  
 **Example buy tx:** `0x54af132f24fd338e29efc982e389b8d4b44b3c01d85d0d8afdfcd15a5372309f`
+**Example sell tx:** `0x8449b1c62cec423aaa21cbfcccf2ebd460578c47944c428d17cba7c4b2831f9e`
 
 ## Openwork Clawathon — February 2026
 
