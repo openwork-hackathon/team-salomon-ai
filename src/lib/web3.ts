@@ -6,13 +6,13 @@ export const BASE_CHAIN = base;
 export const BASE_RPC_URL =
   process.env.NEXT_PUBLIC_BASE_RPC_URL ?? "https://mainnet.base.org";
 
-export const SALOMON_TOKEN_ADDRESS = process.env.NEXT_PUBLIC_SALOMON_TOKEN_ADDRESS as
-  | `0x${string}`
-  | undefined;
+export const SALOMON_TOKEN_ADDRESS = (process.env.NEXT_PUBLIC_SALOMON_TOKEN_ADDRESS ??
+  // Default from README (Mint Club V2 token on Base)
+  "0xA27b0fCfea7457900D04229DA986a28511fb5D81") as `0x${string}`;
 
-export const OPENWORK_ADDRESS = process.env.NEXT_PUBLIC_OPENWORK_ADDRESS as
-  | `0x${string}`
-  | undefined;
+export const OPENWORK_ADDRESS = (process.env.NEXT_PUBLIC_OPENWORK_ADDRESS ??
+  // Base $OPENWORK (reserve token)
+  "0x299c30DD5974BF4D5bFE42C340CA40462816AB07") as `0x${string}`;
 
 export function getPublicClient() {
   return createPublicClient({
